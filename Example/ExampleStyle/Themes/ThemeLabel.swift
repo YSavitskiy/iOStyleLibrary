@@ -6,16 +6,25 @@
 //  Copyright © 2020 Yuriy Savitskiy. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import iOStyleLibrary
 
 extension Theme
 {
-    static let infoStepLabelStyle = UIViewStyle<UILabel> { label in
+    static let boldLabelStyle = UIViewStyle<UILabel> { label in
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 0
-        label.textColor = Asset.Colors.titleTextColor.color
-        label.font = FontFamily.SFUIText.bold.font(size: 15) ?? UIFont.boldSystemFont(ofSize: 15)
+        label.textColor = .darkGray
+        label.font = .boldSystemFont(ofSize: 23)
         label.sizeToFit()
     }
+    
+    static let normalLabelStyle = UIViewStyle<UILabel> { label in
+        label.lineBreakMode = .byWordWrapping
+        label.numberOfLines = 0
+        label.textColor = .orange
+        label.font =  .systemFont(ofSize: 18)
+        label.sizeToFit()
+    }
+    
 }
