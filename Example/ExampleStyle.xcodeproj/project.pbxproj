@@ -13,6 +13,8 @@
 		71087F9725652D9400FF41B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71087F9525652D9400FF41B6 /* Main.storyboard */; };
 		71087F9925652D9500FF41B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71087F9825652D9500FF41B6 /* Assets.xcassets */; };
 		71087F9C25652D9500FF41B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71087F9A25652D9500FF41B6 /* LaunchScreen.storyboard */; };
+		7194100F25653995002545F3 /* ThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7194100E25653995002545F3 /* ThemeView.swift */; };
+		71941013256539AF002545F3 /* ThemeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71941012256539AF002545F3 /* ThemeLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		71087F9825652D9500FF41B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71087F9B25652D9500FF41B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		71087F9D25652D9500FF41B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7194100E25653995002545F3 /* ThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeView.swift; sourceTree = "<group>"; };
+		71941012256539AF002545F3 /* ThemeLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeLabel.swift; sourceTree = "<group>"; };
 		A464B8545E3BD88520ADC272 /* Pods_ExampleStyle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExampleStyle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5AB57F6B98D919E3CA159DC /* Pods-ExampleStyle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleStyle.release.xcconfig"; path = "Target Support Files/Pods-ExampleStyle/Pods-ExampleStyle.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,6 +74,7 @@
 		71087F8E25652D9400FF41B6 /* ExampleStyle */ = {
 			isa = PBXGroup;
 			children = (
+				7194100D25653980002545F3 /* Themes */,
 				71087F8F25652D9400FF41B6 /* AppDelegate.swift */,
 				71087F9325652D9400FF41B6 /* ViewController.swift */,
 				71087F9525652D9400FF41B6 /* Main.storyboard */,
@@ -78,6 +83,15 @@
 				71087F9D25652D9500FF41B6 /* Info.plist */,
 			);
 			path = ExampleStyle;
+			sourceTree = "<group>";
+		};
+		7194100D25653980002545F3 /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				7194100E25653995002545F3 /* ThemeView.swift */,
+				71941012256539AF002545F3 /* ThemeLabel.swift */,
+			);
+			path = Themes;
 			sourceTree = "<group>";
 		};
 		B0DED83EE3477597C77D33FC /* Frameworks */ = {
@@ -204,6 +218,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				71087F9425652D9400FF41B6 /* ViewController.swift in Sources */,
+				7194100F25653995002545F3 /* ThemeView.swift in Sources */,
+				71941013256539AF002545F3 /* ThemeLabel.swift in Sources */,
 				71087F9025652D9400FF41B6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

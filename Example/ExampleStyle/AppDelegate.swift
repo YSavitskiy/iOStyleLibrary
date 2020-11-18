@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  ExampleStyle
-//
-//  Created by Yuriy Savitskiy on 11/18/20.
-//  Copyright © 2020 Yuriy Savitskiy. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain

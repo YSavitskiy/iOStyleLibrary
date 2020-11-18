@@ -1,20 +1,22 @@
-//
-//  ViewController.swift
-//  ExampleStyle
-//
-//  Created by Yuriy Savitskiy on 11/18/20.
-//  Copyright © 2020 Yuriy Savitskiy. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var rectView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
+    
+    @IBAction func applyStyleAction(_ sender: Any) {
+        
+    }
+    
+    @IBAction func applyDifferentStyleAction(_ sender: Any) {
+        
+    }
+    
+    
 }
 

@@ -1,10 +1,10 @@
 import UIKit
 
-struct UIViewStyle<T> {
+public struct UIViewStyle<T> {
     
-    let styling: (T)-> Void
+    public let styling: (T)-> Void
     
-    static func compose(_ styles: UIViewStyle<T>...)-> UIViewStyle<T> {
+    public static func compose(_ styles: UIViewStyle<T>...)-> UIViewStyle<T> {
         return UIViewStyle { view in
             for style in styles {
                 style.styling(view)
@@ -12,9 +12,7 @@ struct UIViewStyle<T> {
         }
     }
     
-    func apply(to view: T) {
+    public func apply(to view: T) {
         styling(view)
-    }
+    }                
 }
-
-
