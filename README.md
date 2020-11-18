@@ -30,4 +30,4 @@ your project.
 
 
 ## License
-GPLv3 License. Copyright (c) 2017
+MIT License. Copyright (c) 2017
