@@ -10,15 +10,19 @@ class ViewController: UIViewController {
     }
     
     @IBAction func applyStyleAction(_ sender: Any) {
-        Theme.boldLabelStyle.apply(to: self.label)
-        Theme.borderViewStyle.apply(to: self.rectView)
+        self.label.theme.apply(Theme.boldLabelStyle)
+        self.rectView.theme.apply(Theme.borderViewStyle)
     }
     
     @IBAction func applyDifferentStyleAction(_ sender: Any) {
+        //or
         Theme.normalLabelStyle.apply(to: self.label)
         Theme.justViewStyle.apply(to: self.rectView)
     }
     
+    
+    @IBAction func applyChainStyle(_ sender: Any) {
+    }
     
 }
 

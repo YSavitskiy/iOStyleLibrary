@@ -11,20 +11,24 @@ import iOStyleLibrary
 
 extension Theme
 {
-    static let boldLabelStyle = UIViewStyle<UILabel> { label in
+    static let boldLabelStyle =  ThemeStyle<UILabel> { label in
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 0
         label.textColor = .darkGray
         label.font = .boldSystemFont(ofSize: 23)
         label.sizeToFit()
     }
-    
-    static let normalLabelStyle = UIViewStyle<UILabel> { label in
+            
+    static let normalLabelStyle = ThemeStyle<UILabel> { label in
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 0
         label.textColor = .orange
         label.font =  .systemFont(ofSize: 18)
         label.sizeToFit()
+    }
+    
+    static let greenLabelStyle = ThemeStyle<UILabel> { label in
+        label.textColor = .green
     }
     
 }
