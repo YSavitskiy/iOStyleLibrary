@@ -20,4 +20,10 @@ public extension Stylist where T: UILabel {
         source.textColor = color
         return self
     }
+    
+    @discardableResult
+    func text(_ text: String?) -> Stylist<T> {
+        source.text = text
+        return self
+    }
 }

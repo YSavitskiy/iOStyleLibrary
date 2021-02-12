@@ -37,6 +37,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XcD-rf-iS4">
                                         <rect key="frame" x="0.0" y="70" width="382" height="30"/>
                                         <state key="normal" title="ChainStyle"/>
+                                        <connections>
+                                            <action selector="applyChainStyle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uHz-uP-5J6"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ST-KO-fid" userLabel="Concatenation">
                                         <rect key="frame" x="0.0" y="105" width="382" height="30"/>

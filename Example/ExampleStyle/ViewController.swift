@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     @IBAction func applyChainStyle(_ sender: Any) {
         self.label.theme
             .fontSize(22)
+            .text("newText")
             .textColor(.systemRed)
         self.rectView.theme
             .cornerRadius(11)
