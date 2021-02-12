@@ -15,13 +15,22 @@ class ViewController: UIViewController {
     }
     
     @IBAction func applyDifferentStyleAction(_ sender: Any) {
-        //or
+        //or apply a little differently
         Theme.normalLabelStyle.apply(to: self.label)
         Theme.justViewStyle.apply(to: self.rectView)
     }
-    
-    
+        
     @IBAction func applyChainStyle(_ sender: Any) {
+        self.label.theme
+            .fontSize(22)
+            .textColor(.systemRed)
+        self.rectView.theme
+            .cornerRadius(11)
+            .color(.lightGray)
+    }
+    
+    
+    @IBAction func applyConcatenation(_ sender: Any) {
     }
     
 }

@@ -7,10 +7,7 @@
 
 import Foundation
 
-//public typealias ThemeStyle<T> = (T) -> ()
-
 public struct ThemeStyle<T> {
-    
     public let styling: (T) -> ()
     
     public func apply(to source: T) {
@@ -20,6 +17,4 @@ public struct ThemeStyle<T> {
     public init(_ styling: @escaping (T) -> ()) {
         self.styling = styling
     }
-    
-    
 }

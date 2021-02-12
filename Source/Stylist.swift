@@ -14,22 +14,3 @@ public struct Stylist<T> : IStylist {
 
 
 
-/*
-public struct Stylist<T> : IStylist {
-    public let source: T
-    
-    @discardableResult
-    public func apply(_ styles: ThemeStyle<SourceType>...) -> Self {
-        styles.forEach {
-            $0(self.source)
-        }
-        return self
-    }
-}
-*/
-
-
-
-
-
-

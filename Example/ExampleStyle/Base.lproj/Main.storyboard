@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="N54-SV-n54">
-                                <rect key="frame" x="16" y="330" width="382" height="100"/>
+                                <rect key="frame" x="16" y="330" width="382" height="135"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JU5-bM-c52">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
@@ -36,9 +36,13 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XcD-rf-iS4">
                                         <rect key="frame" x="0.0" y="70" width="382" height="30"/>
-                                        <state key="normal" title="Concatination"/>
+                                        <state key="normal" title="ChainStyle"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ST-KO-fid" userLabel="Concatenation">
+                                        <rect key="frame" x="0.0" y="105" width="382" height="30"/>
+                                        <state key="normal" title="Concatenation"/>
                                         <connections>
-                                            <action selector="applyChainStyle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mYw-Qj-gmn"/>
+                                            <action selector="applyConcatenation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wjt-I0-GVV"/>
                                         </connections>
                                     </button>
                                 </subviews>

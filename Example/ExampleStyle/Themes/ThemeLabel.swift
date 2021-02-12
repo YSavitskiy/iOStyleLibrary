@@ -26,9 +26,7 @@ extension Theme
         label.font =  .systemFont(ofSize: 18)
         label.sizeToFit()
     }
-    
-    static let greenLabelStyle = ThemeStyle<UILabel> { label in
-        label.textColor = .green
-    }
-    
 }
+
+
+
