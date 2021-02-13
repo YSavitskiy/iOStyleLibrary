@@ -26,7 +26,17 @@ extension Theme
         label.font =  .systemFont(ofSize: 18)
         label.sizeToFit()
     }
+    
+    static let purpleLabelStyle =  ThemeStyle<UILabel> { label in
+        label.textColor = .purple
+    }
+    
+    static let italicLabelStyle =  ThemeStyle<UILabel> { label in
+        if let descriptor = label.font.fontDescriptor.withSymbolicTraits(.traitItalic) {
+           label.font = UIFont(descriptor: descriptor, size: label.font.pointSize)
+        }
+    }
+    
 }
-
 
 

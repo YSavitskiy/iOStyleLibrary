@@ -26,4 +26,17 @@ public extension Stylist where T: UILabel {
         source.text = text
         return self
     }
+    
+    var boldLabelStyle: Stylist<UILabel> {
+        return Theme.boldLabelStyle.apply(to: self.source)
+    }
+    
+    var normalLabelStyle: Stylist<UILabel> {
+        return Theme.normalLabelStyle.apply(to: self.source)
+    }
+    
+    var italicLabelStyle: Stylist<UILabel> {
+        return Theme.italicLabelStyle.apply(to: self.source)
+    }
+    
 }
