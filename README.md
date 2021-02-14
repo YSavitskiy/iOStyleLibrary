@@ -140,5 +140,5 @@ private func prepareStyleStates() {
 Source files for these are in the `Example` directory. Have fun!
 
 ## License
-MIT License. See [License](https://github.com/YSavitskiy/iOStyleLibrary/blob/main/LICENSE) for more information.
+MIT License. See [License.md](https://github.com/YSavitskiy/iOStyleLibrary/blob/main/LICENSE.md) for more information.
 Copyright (c) 2020 Yuriy Savitskiy.
