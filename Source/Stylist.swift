@@ -9,7 +9,7 @@ import Foundation
 
 public struct Stylist<SourceType> : IStylist {
     public let source: SourceType
-       
+            
     init(source: SourceType) {
         self.source = source
     }
@@ -21,15 +21,10 @@ public struct Stylist<SourceType> : IStylist {
         }
         return self
     }
+}
+
+extension Stylist: IThemeStates where SourceType: ITheme {
     
-    @discardableResult
-    public static func +(lhs: Stylist<SourceType>, rhs: Stylist<SourceType>) -> Stylist<SourceType> {
-        return lhs //lhs and rhs are identical
-    }
-        
-    public static func += (lhs: inout Stylist<SourceType>, rhs: Stylist<SourceType>) {
-        lhs = rhs //lhs and rhs are identical
-    }
 }
 
 

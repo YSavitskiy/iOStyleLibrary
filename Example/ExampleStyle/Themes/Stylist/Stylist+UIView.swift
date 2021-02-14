@@ -21,4 +21,10 @@ public extension Stylist where SourceType: UIView {
         source.backgroundColor = color
         return self
     }
+    
+    @discardableResult
+    func alpha(_ alpha: CGFloat) -> Stylist<SourceType> {
+        source.alpha = alpha
+        return self
+    }
 }

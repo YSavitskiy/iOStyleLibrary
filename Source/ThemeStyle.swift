@@ -20,6 +20,14 @@ public struct ThemeStyle<SourceType> {
         return Stylist<SourceType>(source: source)
     }
                 
+    public static func concat(_ styles: ThemeStyle<SourceType>...)-> ThemeStyle<SourceType> {
+        return ThemeStyle { source in
+            for style in styles {
+                style.styling(source)
+            }
+        }
+    }
+    
     static public func +(lhs: ThemeStyle<SourceType>, rhs: ThemeStyle<SourceType>) -> ThemeStyle<SourceType> {
         ThemeStyle (
         { (source: SourceType) -> () in

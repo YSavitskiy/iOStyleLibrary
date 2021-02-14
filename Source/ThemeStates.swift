@@ -7,9 +7,14 @@
 
 import Foundation
 
-final class ThemeStates<T:ITheme> {
-    var state = Optional<AnyHashable>.none
-    var states = [AnyHashable: ThemeStyle<T>]()
+final public class ThemeStates<T> {
+    public var state = Optional<AnyHashable>.none
+    public var savedStates = [AnyHashable: ThemeStyle<T>]()
+    
+    public func clear() {
+        self.state = Optional<AnyHashable>.none
+        self.savedStates = [AnyHashable: ThemeStyle<T>]()
+    }
 }
 
 private struct AssociatedKeys {
@@ -18,7 +23,7 @@ private struct AssociatedKeys {
 }
 
 extension ITheme {
-    var queue: DispatchQueue {
+    var statesQueue: DispatchQueue {
         get {
             if let queue = objc_getAssociatedObject(self, &AssociatedKeys.queueKey) as? DispatchQueue {
                 return queue

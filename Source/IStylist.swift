@@ -9,6 +9,8 @@ import Foundation
 
 public protocol IStylist {
     associatedtype SourceType
-    var source: SourceType { get }    
+    var source: SourceType { get }
 }
+
+
 

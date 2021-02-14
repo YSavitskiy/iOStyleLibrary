@@ -26,4 +26,10 @@ struct Style
         view.layer.borderWidth = 0
         view.backgroundColor = .systemGreen
     }
+        
+    static func alpha(_ alpha: CGFloat) -> ThemeStyle<UIView> {
+        ThemeStyle<UIView> { view in
+            view.alpha = alpha
+        }
+    }
 }
