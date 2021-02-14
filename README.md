@@ -32,7 +32,8 @@ your project.
 
 ## Usage
 
-Add extension for the classes to which you want to apply styles
+Add extension for the classes that you want to apply styles
+
 For example:  
 
 ```
@@ -139,5 +140,5 @@ private func prepareStyleStates() {
 Source files for these are in the `Example` directory. Have fun!
 
 ## License
-MIT License. See [License.md](https://github.com/YSavitskiy/iOStyleLibrary/blob/main/LICENSE.md) for more information.
+MIT License. See [License](https://github.com/YSavitskiy/iOStyleLibrary/blob/main/LICENSE) for more information.
 Copyright (c) 2020 Yuriy Savitskiy.
