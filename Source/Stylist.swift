@@ -7,40 +7,30 @@
 
 import Foundation
 
-public struct Stylist<T> : IStylist {
-    public let source: T
-    
-    @discardableResult
-    public static func +(lhs: Stylist<T>, rhs: Stylist<T>) -> Stylist<T> {
-        return lhs
+public struct Stylist<SourceType> : IStylist {
+    public let source: SourceType
+       
+    init(source: SourceType) {
+        self.source = source
     }
     
-    
-    /*@discardableResult
-    static func +<T:ITheme>(lhs: Stylist<T>, rhs: Stylist<T>) -> Stylist<T> {
-        //lhs.
-        style.apply(to: stylist.source)
-        return stylist
-    }*/
-    
-    /*
     @discardableResult
-    static func +<T:ITheme>(stylist: Stylist<T>, style: ThemeStyle<T>) -> Stylist<T> {
-        style.apply(to: stylist.source)
-        return stylist
-    }*/
+    public func apply(_ styles: ThemeStyle<SourceType>...) -> Self {
+        styles.forEach {
+            $0.apply(to: self.source)
+        }
+        return self
+    }
     
-    
-    /*static func +<T:UILabel>(lhs: Stylist<T>, rhs: Stylist<T>) -> Stylist<T> {
-        return lhs
-    /*ThemeStyleAction<T> {
-        { (source: T) -> () in
-            lhs(source)
-            rhs(source)
-        }*/
-    }*/
+    @discardableResult
+    public static func +(lhs: Stylist<SourceType>, rhs: Stylist<SourceType>) -> Stylist<SourceType> {
+        return lhs //lhs and rhs are identical
+    }
+        
+    public static func += (lhs: inout Stylist<SourceType>, rhs: Stylist<SourceType>) {
+        lhs = rhs //lhs and rhs are identical
+    }
 }
-
 
 
 

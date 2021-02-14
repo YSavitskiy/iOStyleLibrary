@@ -9,9 +9,9 @@
 import UIKit
 import iOStyleLibrary
 
-extension Theme
+extension Style
 {
-    static let boldLabelStyle =  ThemeStyle<UILabel> { label in
+    static let boldLabel =  ThemeStyle<UILabel> { label in
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 0
         label.textColor = .darkGray
@@ -19,7 +19,7 @@ extension Theme
         label.sizeToFit()
     }
             
-    static let normalLabelStyle = ThemeStyle<UILabel> { label in
+    static let normalLabel = ThemeStyle<UILabel> { label in
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 0
         label.textColor = .orange
@@ -27,16 +27,15 @@ extension Theme
         label.sizeToFit()
     }
     
-    static let purpleLabelStyle =  ThemeStyle<UILabel> { label in
+    static let purpleLabel =  ThemeStyle<UILabel> { label in
         label.textColor = .purple
     }
     
-    static let italicLabelStyle =  ThemeStyle<UILabel> { label in
+    static let italicLabel =  ThemeStyle<UILabel> { label in
         if let descriptor = label.font.fontDescriptor.withSymbolicTraits(.traitItalic) {
            label.font = UIFont(descriptor: descriptor, size: label.font.pointSize)
         }
     }
-    
 }
 
 

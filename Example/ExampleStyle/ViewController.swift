@@ -14,55 +14,39 @@ class ViewController: UIViewController {
     
     @IBAction func applyStyleAction(_ sender: Any) {
         //use object style
-        self.label.theme.apply(Theme.boldLabelStyle)
-        self.rectView.theme.apply(Theme.borderViewStyle)
-        self.subrectView.theme.cornerRadius(30)
-        self.subrectView.theme.color(.systemBlue)
+        self.rectView.stylist.apply(Style.borderView)
+        self.label.stylist.boldLabelStyle()
+        self.subrectView.stylist.cornerRadius(30)
+        self.subrectView.stylist.color(.systemBlue)
     }
     
     @IBAction func applyDifferentStyleAction(_ sender: Any) {
         //use static style
-        Theme.normalLabelStyle.apply(to: self.label)
-        Theme.justViewStyle.apply(to: self.rectView)
-        Theme.borderViewStyle.apply(to: self.subrectView)
+        Style.normalLabel.apply(to: self.label)
+        Style.justView.apply(to: self.rectView)
+        Style.borderView.apply(to: self.subrectView)
     }
         
     @IBAction func applyChainStyle(_ sender: Any) {
-        self.label.theme
+        self.label.stylist
             .fontSize(22)
             .text("newText")
             .textColor(.systemRed)
-        self.rectView.theme
+        self.rectView.stylist
             .cornerRadius(11)
             .color(.lightGray)
-        Theme.justViewStyle
+        Style.justView
             .apply(to: self.subrectView)
             .color(.black)
-        
     }
     
     @IBAction func applyConcatenation(_ sender: Any) {
-        let newLabelStyle = Theme.boldLabelStyle + Theme.purpleLabelStyle
-        self.label.theme.apply(newLabelStyle)
+        let newLabelStyle = Style.boldLabel + Style.purpleLabel + Style.italicLabel
+        self.label.stylist.apply(newLabelStyle)
         
-        //self.label.theme + self.label.theme.italicLabelStyle  Theme.italicLabelStyle.styling
+        self.subrectView.stylist.color(.systemYellow) + self.subrectView.stylist.cornerRadius(0) //There's very little point in doing that concatination, but you can
         
-        
-        //var e = Theme.boldLabelStyle.styling + Theme.magentaLabelStyle.styling
-        //self.label.theme.apply(ThemeStyle(e))
-        
-        
-        //var d = self.label.theme.fontSize(3.0) + self.label.theme.color(.black)
-        
-        
-        //var d = self.label.theme.fontSize(2) + Theme.magentaLabelStyle
-        
-        
-        //var r = Theme.boldLabelStyle.styling + Theme.magentaLabelStyle.styling
-        //self.label.theme.color(.magenta) + self.label.theme.fontSize(10)
-        
-        
-        
+        self.rectView.stylist.color(.black).cornerRadius(20)
     }
     
     @IBAction func checkDeinit(_ sender: Any) {

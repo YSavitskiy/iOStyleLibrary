@@ -8,16 +8,16 @@
 
 import iOStyleLibrary
 
-public extension Stylist where T: UIView {
+public extension Stylist where SourceType: UIView {
     @discardableResult
     
-    func cornerRadius(_ size: CGFloat) -> Stylist<T> {
+    func cornerRadius(_ size: CGFloat) -> Stylist<SourceType> {
         source.layer.cornerRadius = size
         return self
     }
     
     @discardableResult
-    func color(_ color: UIColor) -> Stylist<T> {
+    func color(_ color: UIColor) -> Stylist<SourceType> {
         source.backgroundColor = color
         return self
     }

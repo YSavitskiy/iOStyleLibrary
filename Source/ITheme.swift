@@ -8,12 +8,12 @@
 import Foundation
 
 public protocol ITheme: class {
-    associatedtype ThemeType
-    var theme: Stylist<ThemeType> { get }
+    associatedtype SourceType
+    var stylist: Stylist<SourceType> { get }
 }
 
 public extension ITheme {
-    var theme: Stylist<Self> {
+    var stylist: Stylist<Self> {
         get {
             Stylist(source: self)
         }

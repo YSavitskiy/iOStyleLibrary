@@ -7,36 +7,28 @@
 
 import Foundation
 
-/*public class ThemeSourceStyle<T>: ThemeStyle<T> {
-    var source: T
+public struct ThemeStyle<SourceType> {
+    public var styling: ThemeStyleAction<SourceType>
     
-    public init(source: T) {
-        self.source = source
-        super.init(<#T##styling: ThemeStyleAction<T>##ThemeStyleAction<T>##(T) -> ()#>)
-    }
-}*/
-
-
-
-public struct ThemeStyle<T> {
-                            
-    public var styling: ThemeStyleAction<T>
-    
-    public init(_ styling: @escaping ThemeStyleAction<T>) {
+    public init(_ styling: @escaping ThemeStyleAction<SourceType>) {
         self.styling = styling
     }
         
     @discardableResult
-    public func apply(to source: T) -> Stylist<T> {
+    public func apply(to source: SourceType) -> Stylist<SourceType> {
         self.styling(source)
-        return Stylist<T>(source: source)
+        return Stylist<SourceType>(source: source)
     }
                 
-    static public func +(lhs: ThemeStyle<T>, rhs: ThemeStyle<T>) -> ThemeStyle<T> {
+    static public func +(lhs: ThemeStyle<SourceType>, rhs: ThemeStyle<SourceType>) -> ThemeStyle<SourceType> {
         ThemeStyle (
-        { (source: T) -> () in
+        { (source: SourceType) -> () in
             lhs.apply(to: source)
             rhs.apply(to: source)
         })
+    }
+    
+    public static func += (lhs: inout ThemeStyle<SourceType> , rhs: ThemeStyle<SourceType>) {
+        lhs = lhs + rhs
     }
 }

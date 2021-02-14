@@ -9,16 +9,6 @@ import Foundation
 
 public protocol IStylist {
     associatedtype SourceType
-    var source: SourceType { get }     
-}
-
-public extension IStylist where SourceType: ITheme {
-    @discardableResult
-    func apply(_ styles: ThemeStyle<SourceType>...) -> Self {
-        styles.forEach {
-            $0.apply(to: self.source)
-        }
-        return self
-    }
+    var source: SourceType { get }    
 }
 

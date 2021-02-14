@@ -34,7 +34,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="N54-SV-n54">
-                                <rect key="frame" x="16" y="374" width="382" height="170"/>
+                                <rect key="frame" x="16" y="374" width="382" height="240"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JU5-bM-c52">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
@@ -64,8 +64,16 @@
                                             <action selector="applyConcatenation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wjt-I0-GVV"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHh-Wy-d3F">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNB-Mg-lp1">
                                         <rect key="frame" x="0.0" y="140" width="382" height="30"/>
+                                        <state key="normal" title="State 1"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dd0-Yy-gLB">
+                                        <rect key="frame" x="0.0" y="175" width="382" height="30"/>
+                                        <state key="normal" title="State 2"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHh-Wy-d3F">
+                                        <rect key="frame" x="0.0" y="210" width="382" height="30"/>
                                         <state key="normal" title="Check deinit"/>
                                         <connections>
                                             <action selector="checkDeinit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fgt-xy-soh"/>

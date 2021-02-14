@@ -7,10 +7,11 @@
 
 import Foundation
 
-public typealias ThemeStyleAction<T> = (T) -> ()
+public typealias ThemeStyleAction<SourceType> = (SourceType) -> ()
 
-public func +<T:ITheme>(lhs: @escaping ThemeStyleAction<T>, rhs: @escaping ThemeStyleAction<T>) -> ThemeStyleAction<T> {
-    { (source: T) -> () in
+public func +<SourceType:ITheme>(lhs: @escaping ThemeStyleAction<SourceType>,
+                                 rhs: @escaping ThemeStyleAction<SourceType>) -> ThemeStyleAction<SourceType> {
+    { (source: SourceType) -> () in
         lhs(source)
         rhs(source)
     }
