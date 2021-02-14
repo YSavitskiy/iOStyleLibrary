@@ -37,6 +37,8 @@ Add extension for the classes that you want to apply styles
 For example:  
 
 ```
+import iOStyleLibrary
+
 extension UIView: ITheme {
     /*
     It is extending the UIView class to support object styles
