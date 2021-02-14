@@ -4,7 +4,7 @@ target 'ExampleStyle' do
   use_frameworks!
 
   # UI
-  #pod 'iOStyleLibrary', '~> 1.0'
-  pod 'iOStyleLibrary', :path => '../' 
+  pod 'iOStyleLibrary', '~> 2.0'
+  #pod 'iOStyleLibrary', :path => '../' 
 
 end

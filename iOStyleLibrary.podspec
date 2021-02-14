@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'iOStyleLibrary'
-  s.version          = '1.0'
+  s.version          = '2.0'
   s.summary          = "Library for managing element styles"
   s.homepage         = 'https://github.com/YSavitskiy/iOStyleLibrary'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }

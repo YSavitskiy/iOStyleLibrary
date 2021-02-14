@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.prapareStyleStates()
+        self.prepareStyleStates()
         print("didload")
     }
     
@@ -73,7 +73,7 @@ class ViewController: UIViewController {
     }
     
     
-    private func prapareStyleStates() {
+    private func prepareStyleStates() {
         
         self.rectView.stylist.prepareState(state: StyleState.exampleState1,
                                            style: Style.alpha(0.5) + Style.justView )
