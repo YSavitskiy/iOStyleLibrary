@@ -23,9 +23,5 @@ public struct Stylist<SourceType> : IStylist {
     }
 }
 
-extension Stylist: IThemeStates where SourceType: ITheme {
-    
-}
-
 
 

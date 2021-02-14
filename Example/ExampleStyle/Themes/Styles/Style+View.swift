@@ -19,12 +19,14 @@ struct Style
         view.layer.cornerRadius = 15
         view.layer.borderWidth = 2
         view.backgroundColor = .orange
+        view.transform = CGAffineTransform.identity
     }
     
     static let justView = ThemeStyle<UIView> { view in
         view.layer.cornerRadius = 0
         view.layer.borderWidth = 0
         view.backgroundColor = .systemGreen
+        view.transform = CGAffineTransform.identity
     }
         
     static func alpha(_ alpha: CGFloat) -> ThemeStyle<UIView> {

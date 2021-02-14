@@ -7,13 +7,15 @@
 
 import Foundation
 
-final public class ThemeStates<T> {
+final public class ThemeStates<SourceType> {
     public var state = Optional<AnyHashable>.none
-    public var savedStates = [AnyHashable: ThemeStyle<T>]()
+    public var savedStates = [AnyHashable: ThemeStyle<SourceType>]()
+    public var savedActions = [AnyHashable: ThemeStyleAction<SourceType>]()
     
     public func clear() {
         self.state = Optional<AnyHashable>.none
-        self.savedStates = [AnyHashable: ThemeStyle<T>]()
+        self.savedStates = [AnyHashable: ThemeStyle<SourceType>]()
+        self.savedActions = [AnyHashable: ThemeStyleAction<SourceType>]()
     }
 }
 
