@@ -18,6 +18,15 @@ it, simply add the following line to your Podfile:
 pod 'iOStyleLibrary'
 ```
 
+#### Swift Package Manager
+
+iOStyleLibrary is available through [Swift Package Manager](https://swift.org/package-manager).
+
+Add it to an existing Xcode project as a package dependency:
+
+1. From the **File** menu, select **Swift Packages › Add Package Dependency…**
+2. Enter "https://github.com/YSavitskiy/iOStyleLibrary" into the package repository URL text field
+
 ### iOStyleLibrary versions.
 
 Below is a table that shows which version of iOStyleLibrary you should use for

@@ -37,6 +37,7 @@ firebase-debug.log
 
 # Swift Package Manager
 .build/
+.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
 
 # CocoaPods
 Pods/

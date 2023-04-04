@@ -7,7 +7,7 @@
 
 import Foundation
 
-public protocol ITheme: class {
+public protocol ITheme: AnyObject {
     associatedtype SourceType
     var stylist: Stylist<SourceType> { get set }    
 }
