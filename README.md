@@ -24,8 +24,9 @@ iOStyleLibrary is available through [Swift Package Manager](https://swift.org/pa
 
 Add it to an existing Xcode project as a package dependency:
 
-1. From the **File** menu, select **Swift Packages › Add Package Dependency…**
+1. From the **File** menu, select **Add Packages**
 2. Enter "https://github.com/YSavitskiy/iOStyleLibrary" into the package repository URL text field
+3. Press "Add Package"
 
 ### iOStyleLibrary versions.
 

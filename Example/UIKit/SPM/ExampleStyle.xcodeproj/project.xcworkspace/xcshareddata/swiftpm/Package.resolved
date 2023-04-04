@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "iostylelibrary",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/YSavitskiy/iOStyleLibrary.git",
+      "state" : {
+        "revision" : "ccea988fd6ffb8319ad170578aeb080209fdfd62",
+        "version" : "2.0.2"
+      }
+    }
+  ],
+  "version" : 2
+}
